@@ -1,0 +1,607 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    color: #464646;
+}
+:root{
+    --main-color:#F5F5F5;
+    --second-color:#EAF2FD;
+    --boton:#2A7AE4;
+}
+body{
+    background-color: var(--main-color);
+}
+body::-webkit-scrollbar{
+    width: 10px;
+    background: #0b5ac2;
+}
+body::-webkit-scrollbar-thumb{
+    background: #464646;
+    border-radius: 10px;
+    border-right: 2px solid #464646;
+}
+/* globales */
+.sect_pad{
+    padding: 5rem 0rem 2rem 4.5rem;
+}
+.sect_nav{
+    padding-top: 2rem;
+}
+h2{
+    font-size: 2rem;
+    font-weight: 700;
+}
+h2:hover{
+    text-shadow: red -3px 0,
+                 cyan 3px 0;
+}
+h3{
+    font-size: 1.375rem;
+}
+/* header */
+.header{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    opacity: 0.9;
+    background-color: red;
+    background-color: var(--main-color);
+    z-index: 999;
+}
+.header_right{
+    display: flex;
+    font-weight: bold;
+}
+.imagen_vec{
+    padding-right: .5rem;
+}
+.header_nav{
+    display: flex;   
+}
+.header_nav li a{
+    display: inline-block;
+	padding: 15px;
+	line-height: normal;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	border-bottom: 2px solid transparent;
+	font-size: 15px;
+	margin-right: 5px;
+}
+.header_nav li a:hover{
+    font-weight: bold;
+    border-bottom: 2px solid var(--boton);
+	padding-bottom: 5px;
+}
+.header_nav li:last-child a{
+    font-weight: bold;
+}
+#close{
+    align-items: center;
+    display: none;
+}
+#mobile{
+    display: none;
+    align-items: center;
+}
+/* main */
+/* main profile */
+.profile{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+}
+.profile_right{
+    padding-top: 4vh;
+    width: 61%;
+    position: relative;
+}
+/* animacion type */
+.profile_right .cont_text h1,
+.cont_text_animation{
+    font-size: 3.25rem;
+    font-weight: 700;
+}
+/* .profile_right .cont_text{
+    height: 20vh;
+} */
+.cont_text_one{
+    display: flex;
+}
+.type_bar{
+    width: 3px;
+    height: 3.25rem;
+    margin-left: 5px;
+    background-color: #464646;
+    transform: rotateZ(15deg);
+    animation: barra-animacion 1s ease infinite;
+}
+/* fin de animacion */
+.cont_text_dos{
+    position: absolute;
+    bottom: 0px;
+}
+.profile_ul{
+    display: flex;
+}
+.profile_ul li{
+    padding: 2rem;
+}
+.profile_ul li:first-child{
+    padding-left: 0;
+}
+.profile_ul li:hover{
+    font-weight: bold;
+}
+.profile_picture{
+    width: 23rem;
+    height: 23rem;
+    border-radius: 50%;
+    margin-left: 3rem;
+    background-image: url("image/SGCAM_20230819_2125250950.NIGHT.jpg");
+    background-size: cover;
+    border-radius: 50%;
+    transform: translateX(0);
+    animation: 1.5s movercaja infinite;
+}
+/* main about me */
+.aboutMe{
+    height: 65vh;
+    background-color: var(--second-color);
+    display: flex;
+    align-items: center;
+}
+.aboutMe_div{
+    align-items: center;
+    width: 90%;
+}
+.aboutMe_div p{
+    width: 90%;
+    margin-top: .5rem;
+    text-align: justify;
+    text-indent:1rem;
+}
+/* skills */
+.hability{
+    width: 100%;
+}
+.hability h2{
+    text-align: center;
+}
+.hobbies{
+    width: 100%;
+    padding-top: 5rem;
+}
+.skills_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem 0;
+}
+.skills_container_div{
+    margin: 1rem .8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 176px;
+    height: 174px;
+    background: linear-gradient(#fff, #fff, #ebf5fc);
+    border-radius: 6px;
+    transition-duration: 0.3s;
+    box-shadow: inset 0 5px 1px 0 rgba(0,0,0,0.1),
+                      0 5px 15px rgba(0,0,0,0.1),
+                      0 -5px 15px rgba(0,0,0,0.15);
+}
+.skills_container_div:hover,
+.formacion_gene:hover{
+    scale: 1.1;
+    box-shadow: inset 0 -5px 0 0 rgba(0,0,0,0.2),
+                      0 2px 10px rgba(0,0,0,0.75);
+}
+.skills_container_div ul, .skills_container_div ul li{
+    padding: .5rem;
+    font-weight: bold;
+}
+/* formacion & cursos */
+.formacion{
+    background-color: var(--second-color);
+    padding: 2rem 0;
+}
+.formacion_width{
+    width: 90%;
+}
+.formacion h2, .experiencia h2{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.formacion_div{
+    justify-content: center;
+}
+.formacion_div, .experiencia_div{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+.formacion_container ul li{
+    margin-left: 2rem;
+}
+.formacion_container ul li:nth-child(2){
+    font-weight: bold;
+}
+.formacion_gene{
+    width: 368px;
+    height: 286px;
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 1rem;
+    transition-duration: 0.3s;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: inset 0 5px 1px 0 rgba(0,0,0,0.1),
+                      0 5px 15px rgba(0,0,0,0.1),
+                      0 -5px 15px rgba(0,0,0,0.15);
+}
+.formacion_imageOne{
+    background-image: url(image/logo\ anhanguera.png);
+    background-size: cover;
+}
+.formacion_imageTwo{
+    background-image: url(image/alura_logo.png);
+}
+.formacion_imageThree{
+    background-image: url(image/js_web.jpg);
+    background-size: cover;
+}
+.formacion_imageFour{
+    background-image: url(image/Cur_jaba.jpg);
+    background-size: cover;
+}
+.formacion_imageFive{
+    background-image: url(image/VisualStudio.jpg);
+    background-size: cover;
+}
+/* experiencia profecional */
+.exp_he{
+    height: 5vh;
+}
+.experiencia{
+    padding: 5rem 0rem 2rem 4.5rem;
+}
+.experiencia_div{
+    align-items: center;
+}
+.experiencia_div img, .HydrobiusFlix{
+    width: 60%;
+    box-shadow: inset 0 5px 1px 0 rgba(0,0,0,0.1),
+                      0 5px 15px rgba(0,0,0,0.1),
+                      0 -5px 15px rgba(0,0,0,0.15);
+}
+.HydrobiusFlix{
+    border-radius: 10px;
+}
+.experiencia_container{
+    width: 35%;
+    height: 20vh;
+    margin-left: 3%;
+}
+.experiencia_boton{
+    margin: 1rem;
+}
+.exp_btn{
+    margin: .5rem;
+    padding: 1rem;
+    background-color: var(--main-color);
+    color: var(--boton);
+    border-color: var(--boton);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.exp_two{
+    color: white;
+    border-color: black;
+    background: linear-gradient(to right, #000428,#004e92,#00F260);
+    background-size: 200% auto;
+    transition: all .3s cubic-bezier(.25,0.8,.25,1);
+}
+.exp_two:hover{
+    background-position: right center;
+    box-shadow: 3px 10px 10px rgb(0, 0, 0, 0.6);
+}
+/* experiencia practicas con descripcion */
+.galeria{
+    margin: 20px auto;
+    border-top: 2px solid rgb(56, 56, 56,0.5);
+}
+.galeria .imagen{
+    max-width: 700px;
+    display: inline-block;
+    position: relative;
+    width: 29%;
+    margin: 10px 20px;
+    box-shadow: inset 0 5px 1px 0 rgba(0,0,0,0.1),
+                      0 5px 15px rgba(0,0,0,0.1),
+                      0 -5px 15px rgba(0,0,0,0.15);
+}
+.galeria img{
+    width: 100%;
+    vertical-align: top;
+    border-radius: 10px;
+}
+.galeria  .imagen .overlay{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    background: rgba(26, 131, 230, 0.9);
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    transition: 1s all ease;
+    text-align: justify;
+    border-radius: 10px;
+}
+.galeria  .imagen .overlay p{
+    font-weight: normal;
+    color: white;
+    margin-top: 10%;
+    line-height: 22px;
+}
+.galeria .imagen:hover .overlay{
+    opacity: 1;
+}
+.link{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.link a{
+    padding: 0 15px;
+}
+.link a i{
+    font-size: 22px;
+    color: rgb(44, 43, 43);
+    transition: 1s ease;
+}
+.link a i:hover{
+    color: black;
+}
+/* footer */
+footer{
+    text-align: center;
+    height: 7vh;
+}
+footer p{
+    padding: 1rem;
+}
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+/* efecto de movimiento con js */
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+/* animaciones -------------------------------------------------------*/
+/* animacion type */
+@keyframes barra-animacion{
+    50%{
+        height: 20px;
+    }
+}
+/* keyframe para la imagen */
+@keyframes movercaja{
+    50%{
+        transform: translateY(-3px);
+    }
+}
+.profile_picture::before{
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 5%;
+    height: 15px;
+    width: 90%;
+    opacity: 0;
+    background: -webkit-radial-gradient(
+        center, ellipse,
+        rgba(0,0,0,0.35) 0%,
+        rgba(0,0,0,0) 80%);
+    transition-duration: 0.3s;
+}
+.profile_picture:before{
+    opacity: 0.4;
+    transform: translateY(6px);
+    animation: 1.5s moversombra infinite;
+}
+@keyframes moversombra{
+    50%{
+        opacity: 1;
+        transform: translateY(3px);
+    }
+}
+/* responsivo ------------------------------------------------------ */
+@media (max-width:1078px){
+    .header_nav li:nth-child(6){
+        display: none;
+    }
+    .header_responsive{
+        display: block;
+        font-weight: bold;
+    }
+    .profile_right .cont_text h1,
+    .cont_text_animation{
+        font-size: 2.5rem;
+    }
+    .type_bar{
+        height: 2.5rem;
+    }
+    .profile_picture{
+        margin: 0;
+        width: 249px;
+        height: 310px;
+    }
+    .profile_ul li{
+        padding: 15px;
+    }
+    .galeria .imagen{
+        width: 42%;
+    }
+    .galeria .imagen .overlay p{
+        font-size: 16px;
+    }
+}
+@media (max-width:840px){
+    .profile_right{
+        height: 40vh;
+    }
+    .profile_right .cont_text h1,
+    .cont_text_animation{
+        font-size: 2rem;
+    }
+    .type_bar{
+        height: 2rem;
+    }
+    .experiencia{
+        padding: 5rem 0rem 2rem 1rem;
+    }
+}
+@media (max-width:768px){
+    .sect_pad{
+        padding: 2rem 0rem 2rem 1rem;
+    }
+    .header{
+        margin: 0;
+        width: 100%;
+        height: 4vh;
+        opacity: 1;
+        padding: 0 .3rem;
+    }
+    .header_nav{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #EAF2FD;
+        box-shadow: 0 40px 60px rgba(2, 77, 189, 0.3);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+    .header_nav.active{
+        right: 0px;
+    }
+    #mobile{
+        display: flex;
+    }
+    #mobile i{
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+    #close{
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 22px;
+    }
+    .profile_right{
+        height: 35vh;
+        padding-top: 0rem;
+    }
+    .profile_right .cont_text h1,
+    .cont_text_animation{
+        font-size: 1.375rem;
+    }
+    .type_bar{
+        height: 1.375rem;
+    }
+    .profile{
+        height: 40vh;
+    }
+    /* .profile_right .cont_text{
+        height: 10vh;
+    } */
+    .profile ul li{
+        padding: .5rem;
+        font-size: 12px;
+    }
+    .profile_picture{
+        width: 146px;
+        height: 146px;
+        margin-left: 1rem;
+    }
+    /* aboutme */
+    .aboutMe{
+        height: 75vh;
+    }
+    .aboutMe_div p{
+        width: 100%;
+    }
+    /* experiencia */
+    .experiencia_div{
+        flex-direction: column;
+    }
+    .experiencia_boton{
+        margin: 0;
+    }
+   .exp_btn{
+        padding: .5rem;
+    }
+    .experiencia_container{
+        width: 60%;
+    }
+    .experiencia_img{
+        order: -1;
+    }
+    .galeria .imagen{
+        width: 90%;
+    }
+}
+@media(max-width:444px){
+    .profile{
+        flex-direction: column;
+        height: 70vh;
+    }
+    .profile_picture{
+        order: -1;
+    }
+    .profile_right{
+        width: 90%;
+    }
+    .profile_ul li{
+        padding: 2px;
+    }
+    .experiencia_container{
+        width: 90%;
+    }
+    /* formacion */
+    .formacion_gene{
+        width: 224px;
+        height: 200px;
+        padding: 0px;
+        background-size: contain;
+    }
+    .formacion_container ul li{
+        margin-left: 0rem;
+    }
+}
